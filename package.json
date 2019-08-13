@@ -15,7 +15,8 @@
     "consign": "^0.1.6",
     "express": "^4.17.1",
     "mysql2": "^1.6.5",
-    "sequelize": "^5.14.0"
+    "sequelize": "^5.14.0",
+    "sqlite": "^3.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
