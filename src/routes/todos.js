@@ -1,12 +1,11 @@
 module.exports = app => {
 
-    const User = app.db.database.models.User;
+    const Todo = app.db.database.models.Todo;
 
-    app.route('/users')
+    app.route('/todos')
         .get((req, res) => {
-            User.findAll({})
+            Todo.findAll({})
                 .then(result => {
-                    console.log(result)
                     res.json(result)
                 })
                 .catch(err => {
@@ -14,7 +13,7 @@ module.exports = app => {
                 })
         })
         .post((req, res) => {
-            User.create(req.body)
+            Todo.create(req.body)
                 .then(result => res.json(result))
                 .catch(err => {
                     res.status(412).json({msg: err.message})

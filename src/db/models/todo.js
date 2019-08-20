@@ -15,7 +15,7 @@ module.exports = (sequelize, DataType) => {
     })
 
     Todo.associate = (models) => {
-        Todo.belongsTo(models.User)
+        Todo.belongsTo(models.List)
     }
 
     return Todo

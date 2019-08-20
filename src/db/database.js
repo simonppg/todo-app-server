@@ -6,7 +6,7 @@ let db = null
 
 module.exports = app => {
     if(!db) {
-        const config = app.libs.config
+        const config = app.db.config.database
         const sequelize = new Sequelize(
             config.database,
             config.username,
@@ -28,6 +28,7 @@ module.exports = app => {
         })
 
         Object.keys(db.models).forEach(key => {
+            console.log(`associating: ${key} with other modules`)
             db.models[key].associate(db.models)
         })
     }

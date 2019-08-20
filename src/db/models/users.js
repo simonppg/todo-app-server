@@ -30,7 +30,7 @@ module.exports = (sequelize, DataType) => {
     })
 
     User.associate = (models) => {
-        User.hasMany(models.Todo)
+        User.hasMany(models.List)
     }
 
     return User

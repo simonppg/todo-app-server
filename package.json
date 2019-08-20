@@ -12,6 +12,7 @@
   "author": "simonppg",
   "license": "ISC",
   "dependencies": {
+    "babel-register": "^6.26.0",
     "consign": "^0.1.6",
     "express": "^4.17.1",
     "mysql2": "^1.6.5",
