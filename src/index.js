@@ -6,7 +6,7 @@ const app = express()
 consign({
     cwd: __dirname
 })
-.include('db/config/database.js')
+.include('db/config/config.js')
 .then('db/database.js')
 .then('libs/middlewares.js')
 .then('routes')

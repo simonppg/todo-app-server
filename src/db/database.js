@@ -6,13 +6,24 @@ let db = null
 
 module.exports = app => {
     if(!db) {
-        const config = app.db.config.database
-        const sequelize = new Sequelize(
-            config.database,
-            config.username,
-            config.password,
-            config.params
-        )
+        let sequelize
+        const config = app.db.config.config
+        console.log(config)
+
+        if (process.env.NODE_ENV === 'production') {
+            sequelize = new Sequelize(
+                config.production.database,
+                config.production.username,
+                config.production.password,
+                config.production.params)
+        } else {
+
+            sequelize = new Sequelize(
+                config.development.database,
+                config.development.username,
+                config.development.password,
+                config.development.params)
+            }
 
         db = {
             sequelize,
