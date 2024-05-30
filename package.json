@@ -15,7 +15,7 @@
     "babel-register": "^6.26.0",
     "consign": "^0.1.6",
     "express": "^4.19.2",
-    "mysql2": "^3.9.7",
+    "mysql2": "^3.9.8",
     "sequelize": "^5.15.1",
     "sqlite": "^5.1.1"
   },
